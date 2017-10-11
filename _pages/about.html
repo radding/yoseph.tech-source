@@ -1,0 +1,73 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+<section class="about">
+  <a href="{{site.baseurl}}/" class="button_back"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back</a>
+  <div class="about_box">
+    <div class="author">
+        <div class="author_image">
+          <img src="{{site.baseurl}}/assets/img/{% if site.author-pic %}{{site.author-pic}}{% endif %}" alt="Author image">
+        </div>
+        <div class="author_info">
+          <h2 class="author_title">{% if site.author-name %}{{site.author-name}}{% else %}Dwayne Newman{% endif %}</h2>
+          <div class="author_subtitle needsBottom">{% if site.about-author %}{{site.about-author | markdownify}}{% else %}La croix godard blue bottle, vape iceland fingerstache cronut single-origin coffee lyft snackwave normcore small batch.{% endif %}</div>
+          <div class="author_subtitle">
+            <section>
+              <h2>About Me</h2>
+              <p>
+                Hey there! Let me introduce myself while you are here. My name is Yoseph Radding, and I an entrepreneur and 
+                software engineer. If you are interested in building great products, entrepreneurship, and technologies, then you 
+                came to the right place.
+              </p>
+            </section>
+            <section>
+              <h3>How did I get to where I am today?</h3>
+              <p>
+                This is a great question! I like to think I have rather unique story.
+              </p>
+              <p>
+                I started out as a kid who enjoyed building and creating as a child. I remember, when I was about six or seven, 
+                building a a "deer pen" out of fallen tree limbs, nails and rope at my father's friend's house on martha's 
+                vineyard. However, I still didn't really know what I wanted to do for the rest of my life, just like anyother kid.
+                However, that all changed when I entered high school.
+              </p>
+              <p>
+                Most people have a teacher or friend that really helped define them. For me, it was my high school. I went to 
+                Aviation High School in Sunnyside Queens, NY, a specialized high school for aircraft maintenance. It was here that 
+                I fell in love with troubleshooting and engineering. I learned so many invaluable skills here. To this day, I annoy
+                everyone I work with by rambling on about how airplanes work and cool trivia facts about planes. Because of Aviation,
+                I decided to study to become an engineer.
+              </p>
+              <p>
+                But my story doesn't stop there!
+              </p>
+              <p>
+                It wasn't until college, when I cofounded my first startup, 
+                that I truly realized what I love doing. The entire process of building the product and scaling the business was 
+                an amazing experience that I relish to this day. I fell in love with entrepreneurship with LykeMe. Since then
+                I founded another business and I hope to found many more.
+              </p>
+              <p>
+                Today, more than three years after founding LykeMe, I am hoping to make an impact in the Detroit startup space. I am
+                a 2017 Hackerfellow working for SPLT in Detroit. Here's to startups and the growing ecosystem in Detroit!
+              </p>
+            </section>
+
+            <section>
+              <h3>So come hangout!</h3>
+              <p>
+                I love meeting new people and I would love to start a great community around our shared passions. If you want
+                to get in touch, drop me a line at yoseph@shuttl.io!
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="about_social">
+        {% include social_footer.html %}
+      </div>
+    </div> <!-- End Section Author -->
+</section>
