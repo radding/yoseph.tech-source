@@ -42,6 +42,32 @@
 
   .entry_content
     padding-bottom: 2rem
+    display: flex
+    display: -webkit-flex
+    flex-direction: column
+    -webkit-flex-direction: column
+    justify-content: center
+    h2
+      text-align: center
+    p, figure
+      img.small 
+        max-width: 30%
+      img, figure
+        max-width: 70%
+        height: auto
+        margin: 0 auto
+      figure image
+        max-width: 70%
+        height: auto
+    figure
+      display: flex
+      display: -webkit-flex
+      flex-direction: column
+      -webkit-flex-direction: column
+      justify-content: center
+      -webkit-justify-content: center
+      figcaption
+        text-align: center
 
 .post_footer
   padding: 2rem 0

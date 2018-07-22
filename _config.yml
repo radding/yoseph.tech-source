@@ -1,17 +1,15 @@
 logo: # add logo name
 title: Yoseph.TECH | All things Tech
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  An awesome website for tech related shenanigans. Maybe even the ocassional cat picture. (I have the best cat)
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://yoseph.tech" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Banner settings
-video: mountains.mp4 # add banner video. Add your video file to the folder video
-banner-title: # add banner title
-banner-desc: # add banner description
+video: opener.mp4 # add banner video. Add your video file to the folder video
+banner-title: Code. Build. Sleep. # add banner title
+banner-desc: I do stuff occassionally # add banner description
 
 # Author settings
 author-pic: face.jpg # your photo
@@ -19,7 +17,7 @@ author-name: Yoseph Radding
 about-author: Entrepreneur, Software Guru, Product Guy, 2017 HackerFellow and most importantly, a **full blown Geek**.
 email: yoseph@shuttl.io # your email
 phone: # your pnone number
-website: https://yoseph.tech # you website
+website: http://yoseph.tech # your website
 
 # Social link
 google_url:    # add url link
@@ -31,13 +29,13 @@ facebook_url:  # add url link
 github_url: https://github.com/radding
 
 # Disqus
-discus_identifier: # add your discus identifier
+discus_identifier: yoseph-tech.disqus.com # add your discus identifier
 
 # Newsletter
-mailchimp: # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+mailchimp: tech.us16.list-manage.com/subscribe/post?u=465600c4f525ed3e9efc9ee60&amp;id=d13aa71182 # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
 
 # Tracker
-analytics:
+analytics: UA-83670049-2
 
 # Paginate
 paginate: 12
@@ -48,6 +46,9 @@ markdown: kramdown
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-time-to-read
+
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "deploy.sh"]

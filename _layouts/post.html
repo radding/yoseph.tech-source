@@ -12,11 +12,12 @@ layout: default
       <div class="post_description">
         <p class="post_meta">{{page.date | date: '%Y, %b %d'}}</p>
         <h1 class="post_title">{{page.title}}</h1>
+        <p class="post_meta"> Reading Time: {{page.content | markdownify | reading_time_as_i}}</p>
       </div>
     </header> <!-- End Header -->
 
     <div class="entry_content">
-      {{page.content | markdownify}}
+      {{page.content | markdownify }}
     </div>
     
     <div class="post_wrapper">
@@ -44,7 +45,7 @@ layout: default
       </div>
       <div class="author_info">
         <h2 class="author_title">{% if site.author-name %}{{site.author-name}}{% else %}Dwayne Newman{% endif %}</h2>
-        <p class="author_subtitle">{% if site.about-author %}{{site.about-author}}{% else %}La croix godard blue bottle, vape iceland fingerstache cronut single-origin coffee lyft snackwave normcore small batch.{% endif %}</p>
+        <p class="author_subtitle">{% if site.about-author %}{{site.about-author | markdownify}}{% else %}La croix godard blue bottle, vape iceland fingerstache cronut single-origin coffee lyft snackwave normcore small batch.{% endif %}</p>
         <div class="author_social">
           {% if site.email %}
           <span class="author_email"><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{site.email}}">{{site.email}}</a></span>
@@ -54,15 +55,20 @@ layout: default
           
           {% if site.phone %}
           <span class="author_phone"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{site.phone}}">{{site.phone}}</a></span>
-          {% else %}
-          <span class="author_phone"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+496-169-65-57">(496)-169-6557</a></span>
           {% endif %}
 
           {% if site.website %}
           <span class="author_website"><i class="fa fa-link" aria-hidden="true"></i> <a href="{{site.website}}" target="_blank">{{site.website}}</a></span>
           {% else %}
           <span class="author_website"><i class="fa fa-link" aria-hidden="true"></i> <a href="#" target="_blank">https://dwayne.example.com</a></span>
-          {% endif %}            
+          {% endif %}
+          {% if site.twitter_url %}
+            <span>
+              <a href="{{ site.twitter_url }}" target="_blank">
+                <i class="fa fa-twitter" aria-hidden="true"></i> @raddingy
+              </a>
+            </span>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -70,7 +76,7 @@ layout: default
 
   <section class="recent_box">
     <div class="post_wrapper">
-      <h2 class="recent_title">Recent post</h2>
+      <h2 class="recent_title">Recent posts</h2>
       <div class="recent_list">
         {% for post in site.posts offset:0 limit:6 %}
           {% if post.title %}
